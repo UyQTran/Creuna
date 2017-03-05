@@ -1,0 +1,184 @@
+<head>
+    <title>Creuna Ticketmaster</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="navigation">
+            <div class="container float-right">
+                <p>
+                    navtext
+                    navtext
+                    navtext
+                    navtext
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="font-size: 30px;">
+                    <span>
+                        <div class="circle"></div>
+                    </span>
+                    <span>
+                        Logo
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <div class="pull-right">
+                    <button type="button" class="btn btn-link custom-btn" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-link custom-btn" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-link custom-btn" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="verticaltext">
+                        <div class="verticaltext verticaltext_content">
+                            #barnet
+                        </div>
+                    </div>
+                    <div class="ratio" style="background-image:url('http://www.vl.no/polopoly_fs/1.42237.1398265554!/image/image.jpg_gen/derivatives/landscape_980/image.jpg')"></div>
+                    <div class="left-col-tekst">
+                        Tillit som tema i Fosses tekster
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="header-title">
+                        <p class="capitalize">
+                            barnet
+                        </p>
+                    </div>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="ratio" style="background-image:url('http://www.nationaltheatret.no/filestore/BARNET-web1966x10002.jpg?size=983x500&video23=true&video23url=http://live.nationaltheatret.no/barnet')">
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="ratio" style="background-image:url('http://www.nationaltheatret.no/filestore/Barnet8.jpg?size=983x500')">
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="ratio" style="background-image:url('http://www.nationaltheatret.no/filestore/Barnet5.jpg?size=983x500')">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <div>
+                        <h2>
+                            Håplaust om håp og trøyst
+                        </h2>
+                        <h4>
+                            Ei mild og vår fortjeling i skjeringspunktet mellom djupt alvor og humor
+                        </h4>
+                        <p>
+                            To unge einsame menneske, Frdrik og Agnes, kjem frå livets skyggeside og møtest i eit busskur. Dei finn trøyst i og blir glade i kvarandre - og snart ventar dei barn. Men graviditeten går ikkje som planlagt, og dei to må fast i trua på kvarandre og at livet kan vere godt.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="right-col">
+                        <button type = "button" class = "btn btn-primary btn-md">
+                            Sikre deg billett
+                        </button>
+                        <div class="ticket-count">
+                            Kun {{showsCount}} forestillinger igjen!
+                        </div>
+                        <div>
+                            <h3>
+                                Når går forestillingen?
+                            </h3>
+                        </div>
+                        <div class="ticket-list">
+                            <table class="table">
+                                <tbody>
+                                {{#each shows}}
+                                    {{> show}}
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="credits">
+                            <div>
+                                <b>Av:</b>
+                                Giovanni Bocaccio
+                            </div>
+                            <div>
+                                <b>Regi:</b>
+                                Elisa Kragerud
+                            </div>
+                            <div>
+                                <b>Oversettelse:</b>
+                                Birgit Svihus, Tommy Watz
+                            </div>
+                            <div>
+                                <b>Scienisk bearbeidelse:</b>
+                                Elisa Kragerud, Solveig Gade
+                            </div>
+                            <div>
+                                <b>Varighet:</b>
+                                2t 30min. inkl. pause
+                            </div>
+                            <div>
+                                <b>Scene:</b>
+                                Amfiscene
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="advert">
+        <button type="button" class="btn btn-link" aria-label="Left Align">
+            <span class="glyphicon glyphicon-remove-sign remove-sign" aria-hidden="true"></span>
+        </button>
+    </div>
+</body>
+
+<template name="show">
+    <tr>
+        <td class="table-element">{{dayName}} {{dayNumber}}.{{month}}</td>
+        <td class="table-element">{{timeFrom}} - {{timeTo}}</td>
+        <td>
+            <button type = "button" class = "btn btn-primary btn-sm">
+                kjøp
+            </button>
+        </td>
+    </tr>
+</template>
