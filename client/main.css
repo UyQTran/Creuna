@@ -152,17 +152,28 @@ button {
     top: 450px;
     left: 200px;
     z-index: 10;
-    width: 15vw;
-    height: 15vw;
+    width: 200px;
+    height: 200px;
     background: #ff005e;
     position: absolute;
 }
 
 .remove-sign {
-    top: 0;
-    left: 120px;
+    top: -23px !important;
+    left: 150px;
     position: relative;
     font-size: 30px;
+    color: #282828;
+}
+
+.circle-under {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: #FFF;
+    top: 10px;
+    left: 164px;
+    position: relative;
 }
 
 .credits {
