@@ -10,7 +10,8 @@ import '../../client/main.html';
 
 Template.body.helpers({
     shows() {
-        const allShows = Shows.find({});
+        const projection = {sort:{"dateFrom":1}, limit:5};
+        const allShows = Shows.find({},projection).fetch();
         const dayNameFormat = 'dddd';
         const dayNumberFormat = 'DD';
         const monthFormat = 'MMM';

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
 </head>
 
 <body>
@@ -46,13 +47,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="advert">
+                <div id="advert" class="advert">
                     <div class="circle-under"></div>
-                    <button type="button" class="btn btn-link" aria-label="Left Align">
+                    <button type="button" class="btn btn-link remove-btn" onclick="remove_advert()" aria-label="Left Align">
                         <span class="glyphicon glyphicon-remove-sign remove-sign" aria-hidden="true"></span>
                     </button>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 left-col">
                     <div class="verticaltext">
                         <div class="verticaltext verticaltext_content">
                             #barnet
@@ -63,7 +64,7 @@
                         Tillit som tema i Fosses tekster
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 middle-col">
                     <div class="header-title">
                         <p class="capitalize">
                             barnet
@@ -117,7 +118,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 right-col">
                     <div class="right-col">
                         <button type = "button" class = "btn btn-primary btn-md">
                             Sikre deg billett
@@ -170,6 +171,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function remove_advert() {
+            document.getElementById("advert").style.display = "none";
+        }
+        function edit_button() {
+            console.log("hei");
+                    document.getElementById("show1").class += " disabled";
+        }
+    </script>
 </body>
 
 <template name="show">
@@ -177,7 +188,7 @@
         <td class="table-element">{{dayName}} {{dayNumber}}.{{month}}</td>
         <td class="table-element">{{timeFrom}} - {{timeTo}}</td>
         <td>
-            <button type = "button" class = "btn btn-primary btn-sm">
+            <button id="show1" value="{{show.soldOut}}" onLoad="edit_button()" type="button" class="btn btn-primary btn-sm disabled">
                 kjøp
             </button>
         </td>

@@ -276,6 +276,7 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/allow-deny/1.0.4/web.browser/allow-deny-tests.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/random/1.0.9/web.browser/deprecated.js" />
     </CLASSES>
+    <JAVADOC />
     <SOURCES />
   </library>
 </component>

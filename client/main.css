@@ -1,16 +1,25 @@
 /* CSS declarations go here */
-h1 {
-    font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+@font-face {
+    font-family: abril_bold;
+    src: url("Fonter/Abril/Abril_Display_Bold.otf") format("opentype");
 }
 
 h2 {
-    font-weight: bold !important;
+    font-family:  "Abril Fatface" !important;
 }
 
 h3 {
-    font-weight: bold !important;
+    font-family:  "Abril Fatface" !important;
 }
 
+h4 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
+    opacity: 0.5;
+}
+
+p {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
+}
 
 .navigation {
     background: linear-gradient(to right, #6e0028, black); /* Standard syntax */
@@ -100,6 +109,7 @@ p.capitalize {
 }
 
 .left-col-tekst {
+    font-family: Futura;
     margin-top: 10px;
     margin-left: 10px;
     font-size: 18px;
@@ -149,8 +159,8 @@ button {
 }
 
 .advert {
-    top: 450px;
-    left: 200px;
+    margin-top: 20vw;
+    margin-left: 3vw;
     z-index: 10;
     width: 200px;
     height: 200px;
@@ -159,11 +169,14 @@ button {
 }
 
 .remove-sign {
+    font-size: 30px;
+    color: #282828;
+}
+
+.remove-btn {
     top: -23px !important;
     left: 150px;
     position: relative;
-    font-size: 30px;
-    color: #282828;
 }
 
 .circle-under {
@@ -178,4 +191,10 @@ button {
 
 .credits {
     font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+    .left-col {
+        display: none;
+    }
 }
