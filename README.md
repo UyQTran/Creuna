@@ -5,3 +5,4 @@ __Antakelser__
 - Antar at siden skal ha minst mulig funksjonalitet siden det ikke ble spesifisert
 - Jeg har kun brukt databasen til når forestillingene går og om de er utsolgt. Databasen har meget simpel struktur.
 - Kun knappen for reklamen (rosa boksen) har funksjonalitet.
+- Antar at jeg ikke får lov til å bruke rammeverk som ReactJS fordi oppgaven sa at jeg skulle skrive i HTML
